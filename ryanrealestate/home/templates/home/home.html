@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+
+
+{% block content %}
+<div class="row header-image" style="background-image:url({% static 'img/home/header-image.jpg' %});"></div>
+{{page.body|safe}}
+{% endblock %}

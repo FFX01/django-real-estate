@@ -1,0 +1,732 @@
+/*=============================================================================
+    Imports
+=============================================================================*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300,300italic,700italic);
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,300);
+
+/*=============================================================================
+    Footer Styles
+=============================================================================*/
+
+.footer {
+    background-color: #144D84;
+}
+
+/*=============================================================================
+    Listing Styles
+=============================================================================*/
+
+.listing-main-image .col-1-1 {
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+}
+
+.easy-map-googlemap {
+    width: 100% !important;
+    height: 200px !important;
+}
+
+.gallery-image {
+    background-size: cover;
+    background-position: center;
+    padding-top: 75% !important;
+    transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+}
+
+.gallery-image:hover {
+    opacity: 0.4;
+}
+
+/*=============================================================================
+    Nav Styles
+=============================================================================*/
+
+#main-navigation {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    overflow: hidden;
+    background-color: #144D84;
+}
+
+#main-navigation h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#main-navigation h2 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#main-navigation ul {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-left: 0;
+}
+
+#main-navigation ul li {
+    float: right;
+    padding: 5px 10px;
+}
+
+#main-navigation ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+#main-navigation ul li a::before,
+#main-navigation ul li a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+#main-navigation ul li a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+#main-navigation ul li a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.navspacer {
+    height: 40px;
+}
+
+#main-navigation ul li a:hover::before,
+#main-navigation ul li a:hover::after,
+#main-navigation ul li a:focus::before,
+#main-navigation ul li a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+.nav-divider {
+    height: 20px;
+    background-color: rgb(20,20,20);
+}
+
+@media screen and (max-width: 600px) {
+    #main-navigation ul li {
+        width: 100%;
+        text-align: center;
+    }
+    #main-navigation h2 {
+        font-size: 2em;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+}
+
+/*=============================================================================
+    Header Image
+=============================================================================*/
+
+.header-image {
+    height: 1000px;
+}
+
+@media screen and (max-width: 769px) {
+    .header-image {
+       display: none;
+    }
+}
+
+/*=============================================================================
+    Header Image
+=============================================================================*/
+
+.row.stunning-text h2 {
+    padding: 0 5px;
+    border-right: 2px solid #000;
+    border-left: 2px solid #000;
+}
+
+/*=============================================================================
+    Header Image
+=============================================================================*/
+
+.listing-featured-img {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 150px;
+    overflow: hidden;
+}
+
+/*=============================================================================
+    Global Styles
+=============================================================================*/
+
+.cta-medium {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #000;
+    font-weight: 700;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(220,220,220);
+}
+
+.container {
+    width: 100%;
+}
+
+p, li {
+    font-family: 'Josefin Sans';
+    font-size: 1.3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato';
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1.1em;
+}
+
+p.center,
+a.center,
+h1.center,
+h2.center,
+h3.center,
+h4.center,
+h5.center,
+h6.center {
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+}
+
+div.center, img.center {
+    margin: 0 auto;
+    float: none !important;
+}
+
+img.center {
+    display: block;
+}
+
+.right {
+    text-align: right;
+}
+
+.light {
+    font-weight: 200;
+}
+
+.heavy {
+    font-weight: 800;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1.1em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+}
+
+
+/*=============================================================================
+    Grid Styles
+=============================================================================*/
+
+.row {
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+}
+
+div[class^="col-"] {
+    float: left;
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+/* full width */
+.col-1-1 {
+    width: 100%;
+}
+
+/* half width */
+.col-1-2 {
+    width: 50%;
+}
+
+/* thirds */
+.col-1-3 {
+    width: 33.33%;
+}
+
+.col-2-3 {
+    width: 66.66%;
+}
+
+/* fourths */
+.col-1-4 {
+    width: 25%;
+}
+
+.col-2-4 {
+    width: 50%;
+}
+
+.col-3-4 {
+    width: 75%;
+}
+
+/* fifths */
+.col-1-5 {
+    width: 20%;
+}
+
+.col-2-5 {
+    width: 40%;
+}
+
+.col-3-5 {
+    width: 60%;
+}
+
+.col-4-5 {
+    width: 80%;
+}
+
+/* sixths */
+.col-1-6 {
+    width: 16.66%;
+}
+
+.col-2-6 {
+    width: 33.33%;
+}
+
+.col-3-6 {
+    width: 50%;
+}
+
+.col-4-6 {
+    width: 66.66%;
+}
+
+.col-5-6 {
+    width: 83.33%;
+}
+
+/* sevenths */
+.col-1-7 {
+    width: 14.28%;
+}
+
+.col-2-7 {
+    width: 28.56%;
+}
+
+.col-3-7 {
+    width: 42.84%;
+}
+
+.col-4-7 {
+    width: 57.12%;
+}
+
+.col-5-7 {
+    width: 71.4%;
+}
+
+.col-6-7 {
+    width: 85.68%;
+}
+
+/* eighths */
+.col-1-8 {
+    width: 12.5%;
+}
+
+.col-2-8 {
+    width: 25%;
+}
+
+.col-3-8 {
+    width: 37.5%;
+}
+
+.col-4-8 {
+    width: 50%;
+}
+
+.col-5-8 {
+    width: 62.5%;
+}
+
+.col-6-8 {
+    width: 75%;
+}
+
+.col-7-8 {
+    width: 87.5%;
+}
+
+/* ninths */
+.col-1-9 {
+    width: 11.11%;
+}
+
+.col-2-9 {
+    width: 22.22%;
+}
+
+.col-3-9 {
+    width: 33.33%;
+}
+
+.col-4-9 {
+    width: 44.44%;
+}
+
+.col-5-9 {
+    width: 55.55%;
+}
+
+.col-6-9 {
+    width: 66.66%;
+}
+
+.col-7-9 {
+    width: 77.77%;
+}
+
+.col-8-9 {
+    width: 88.88%;
+}
+
+/* tenths */
+.col-1-10 {
+    width: 10%;
+}
+
+.col-2-10 {
+    width: 20%;
+}
+
+.col-3-10 {
+    width: 30%;
+}
+
+.col-4-10 {
+    width: 40%;
+}
+
+.col-5-10 {
+    width: 50%;
+}
+
+.col-6-10 {
+    width: 60%;
+}
+
+.col-7-10 {
+    width: 70%;
+}
+
+.col-8-10 {
+    width: 80%;
+}
+
+.col-9-10 {
+    width: 90%;
+}
+
+@media screen and (max-width: 980px) {
+
+/*fifths*/
+.col-3-5 {
+    width: 100%;
+}
+
+}
+
+@media screen and (max-width: 800px) {
+
+/* half width */
+.col-1-2 {
+    width: 100%;
+}
+
+/* thirds */
+.col-1-3 {
+    width: 100%;
+}
+
+.col-2-3 {
+    width: 100%;
+}
+
+/* fourths */
+.col-1-4 {
+    width: 50%;
+}
+
+.col-2-4 {
+    width: 100%;
+}
+
+.col-3-4 {
+    width: 100%;
+}
+
+/* fifths */
+.col-1-5 {
+    width: 33.33%;
+}
+
+.col-2-5 {
+    width: 50%;
+}
+
+.col-3-5 {
+    width: 100%;
+}
+
+.col-4-5 {
+    width: 100%;
+}
+
+/* sixths */
+.col-1-6 {
+    width: 33.33%;
+}
+
+.col-2-6 {
+    width: 66.66%;
+}
+
+.col-3-6 {
+    width: 100%;
+}
+
+.col-4-6 {
+    width: 100%;
+}
+
+.col-5-6 {
+    width: 100%;
+}
+
+/* sevenths */
+.col-1-7 {
+    width: 33.33%;
+}
+
+.col-2-7 {
+    width: 66.66%;
+}
+
+.col-3-7 {
+    width: 100%;
+}
+
+.col-4-7 {
+    width: 100%;
+}
+
+.col-5-7 {
+    width: 100%;
+}
+
+.col-6-7 {
+    width: 100%;
+}
+
+/* eighths */
+.col-1-8 {
+    width: 33.33%;
+}
+
+.col-2-8 {
+    width: 66.66%;
+}
+
+.col-3-8 {
+    width: 100%;
+}
+
+.col-4-8 {
+    width: 100%;
+}
+
+.col-5-8 {
+    width: 100%;
+}
+
+.col-6-8 {
+    width: 100%;
+}
+
+.col-7-8 {
+    width: 100%;
+}
+
+/* ninths */
+.col-1-9 {
+    width: 33.33%;
+}
+
+.col-2-9 {
+    width: 66.66%;
+}
+
+.col-3-9 {
+    width: 100%;
+}
+
+.col-4-9 {
+    width: 100%;
+}
+
+.col-5-9 {
+    width: 100%;
+}
+
+.col-6-9 {
+    width: 100%;
+}
+
+.col-7-9 {
+    width: 100%;
+}
+
+.col-8-9 {
+    width: 100%;
+}
+
+/* tenths */
+.col-1-10 {
+    width: 25%;
+}
+
+.col-2-10 {
+    width: 25%;
+}
+
+.col-3-10 {
+    width: 25%;
+}
+
+.col-4-10 {
+    width: 50%;
+}
+
+.col-5-10 {
+    width: 50%;
+}
+
+.col-6-10 {
+    width: 75%;
+}
+
+.col-7-10 {
+    width: 75%;
+}
+
+.col-8-10 {
+    width: 100%;
+}
+
+.col-9-10 {
+    width: 100%;
+}
+
+}
+
+@media screen and (max-width: 560px) {
+
+div[class^="col-"] {
+    width: 100%;
+}
+
+}
+
+
+
+
+
+
+

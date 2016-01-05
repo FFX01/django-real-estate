@@ -1,0 +1,21 @@
+{% load staticfiles %}
+{% load menu %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{meta_title}}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <meta name="description" content="{{meta_description}}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+<body>
+{% render_menu 'main-navigation' %}
+<div class="container">
+    {% block content %}
+    {% endblock %}
+    {% include 'footer.html' %}
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+<div class="row page-title">
+    <div class="col-1-1">
+        <h1>{{page_instance.title}}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-1-5"></div>
+    <div class="col-3-5">
+        {{page_instance.description|safe}}
+    </div>
+    <div class="col-1-5"></div>
+</div>
+{% for listing in listings %}
+<div class="row">
+    <div class="col-1-5"></div>
+    <div class="col-3-5">
+        <h2><a href="{% url 'news:post' slug=listing.slug %}" title="{{listing.title}}">{{listing.title}}</a></h2>
+        {% if listing.featured_image %}
+            <div class="post-image-small" style="background-image:url({{listing.featured_image.url}});"></div>
+        {% endif %}
+        <hr class="divider">
+        <p class="post-description">{{listing.body|truncatewords:80|safe}}</p>
+        <p><a href="{% url 'news:post' slug=listing.slug %}" class="cta-medium">READ MORE</a></p>
+    </div>
+    <div class="col-1-5"></div>
+</div>
+{% endfor %}
+<div class="row">
+    <div class="col-1-5"></div>
+    <div class="col-3-5">
+        <div class="pagination">
+            <span class="step-links">
+                {% if listings.has_previous %}
+                    <a href="?page={{listings.previous_page_number}}" class="previous">Previous</a>
+                {% endif %}
+                <span class="current">
+                    Page {{listings.number }} of {{listings.paginator.num_pages}}
+                </span>
+                {% if listings.has_next %}
+                    <a href="?page={{listings.next_page_number}}">Next</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+    <div class="col-1-5"></div>
+</div>
+{% endblock %}

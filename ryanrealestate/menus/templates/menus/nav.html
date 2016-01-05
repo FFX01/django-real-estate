@@ -1,0 +1,9 @@
+<nav id="{{menu.slug}}">
+    <h2><a href="{% url 'home:home' %}" title="prestige local properties"><span style="background-color:#000;padding:5px 10px 10px;border-radius:25px;line-height:2;">Prestige</span> Local Properties</a></h2>
+    <ul>
+        {% for item in items %}
+        <li><a href="{{item.link}}">{{item.name}}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+<div class="row nav-divider"></div>

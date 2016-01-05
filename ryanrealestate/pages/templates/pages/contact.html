@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-1-1">
+        <h1 class="center">{{page_title}}</h1>
+        <hr class="divider">
+        {{page.page_description|safe}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-3-5 center">
+        <form id="contact-form" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-1-3">
+                    {{contact_form.name.label_tag}}<br>
+                    {{contact_form.name}}
+                </div>
+                <div class="col-1-3">
+                    {{contact_form.company.label_tag}}<br>
+                    {{contact_form.company}}
+                </div>
+                <div class="col-1-3">
+                    {{contact_form.email.label_tag}}<br>
+                    {{contact_form.email}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-1">
+                    {{contact_form.message.label_tag}}<br>
+                    {{contact_form.message}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-1">
+                    <input id="contact-submit" type="submit" value="Send"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% load easy_maps_tags %}
+
+{% block content %}
+<div class="row listing-title">
+            <div class="col-1-1">
+                <h1 class="center" style="margin:0;">{{listing.name}}</h1>
+                {% if listing.is_sold %}
+                    <h2 class="center sold-title">SOLD</h2>
+                {% endif %}
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row listing-main-image">
+            <div class="col-1-1" style="background-image:url({{listing.main_image.url}});"></div>
+        </div>
+        <hr class="divider">
+<div class="row">
+    <div class="col-1-5"></div>
+    <div class="col-3-5">
+        <div class="row">
+            <h3 class="center" style="background-color: #144D84;padding:10px 0;">[ Details ]</h3>
+            <div class="col-1-4">
+                <ul>
+                    <li><span class="heavy">Location: </span>{{listing.location}}</li>
+                    <li><span class="heavy">Price: </span>${{listing.price}}</li>
+                    <li><span class="heavy">Date Available: </span>{{listing.date_available}}</li>
+                    {% if listing.is_sold %}
+                    <li><span class="heavy">Date Sold: </span>{{listing.date_sold}}</li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="col-3-4">
+                <div class="row">
+                    {{listing.property_description|safe}}
+                </div>
+                <div class="row">
+                    {{listing.neighborhood_description|safe}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% easy_map listing.location %}
+        </div>
+        <div class="row listing-gallery">
+            <h3 class="center" style="background-color: #144D84;padding:10px 0;">[ Gallery ]</h3>
+            {% if listing.gallery_image %}
+                {% for image in listing.gallery_image.all %}
+                    <div class="col-1-4">
+                        <a href="{{image.image.url}}" target="_blank" title="{{image.title}}">
+                            <div class="col-1-1 gallery-image" style="background-image:url({{image.image.url}});">
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-1-5"></div>
+</div>
+{% endblock %}
