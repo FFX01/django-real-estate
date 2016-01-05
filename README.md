@@ -10,5 +10,6 @@ A small and dynamic real estate website with basic CMS capabilities.
 * Infinitely nestable static content pages using django mptt
 * SEO optimization with Meta tags available for all models
 * Easily themable and extendable with basic Django templates
+* Integrated Gmail contact form
 
 
